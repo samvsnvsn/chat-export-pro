@@ -1,0 +1,30 @@
+# --- Secrets / credentials ---
+.env
+.env.*
+*.key
+*.pem
+*.p12
+secrets.json
+credentials.json
+
+# --- Python runtime files ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# --- Test output artifacts ---
+output/
+.out/
+coverage.xml
+.coverage
+htmlcov/
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

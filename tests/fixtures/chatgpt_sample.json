@@ -1,0 +1,21 @@
+{
+  "conversations": [
+    {
+      "title": "Python Tips",
+      "id": "conv-001",
+      "create_time": 1700000000,
+      "mapping": {
+        "n1": {"id": "n1", "parent": null, "children": ["n2"],
+               "message": {"author": {"role": "user"}, "content": {"content_type": "text", "parts": ["How do I reverse a string in Python?"]}}},
+        "n2": {"id": "n2", "parent": "n1", "children": ["n3"],
+               "message": {"author": {"role": "assistant"}, "content": {"content_type": "text", "parts": ["Use slicing: `text[::-1]`.\n\nFor example:\n```\nprint('hello'[::-1])\n```\n\n- Simple\n- Fast"]}}},
+        "n3": {"id": "n3", "parent": "n2", "children": ["n4", "n5"],
+               "message": {"author": {"role": "user"}, "content": {"content_type": "text", "parts": ["Thanks! What about **reversing a list**?"]}}},
+        "n4": {"id": "n4", "parent": "n3", "children": [],
+               "message": {"author": {"role": "system"}, "content": {"content_type": "text", "parts": ["(hidden system node, should be skipped)"]}}},
+        "n5": {"id": "n5", "parent": "n3", "children": [],
+               "message": {"author": {"role": "assistant"}, "content": {"content_type": "text", "parts": ["Use `list.reverse()` or `lst[::-1]`."]}}}
+      }
+    }
+  ]
+}

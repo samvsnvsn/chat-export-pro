@@ -1,0 +1,22 @@
+{
+  "conversations": [
+    {
+      "uuid": "claude-uuid-1234",
+      "name": "Recipe Planning",
+      "created_at": "2024-01-15T10:30:00Z",
+      "chat_messages": [
+        {"sender": "human", "text": "Can you suggest a *quick* pasta recipe?"},
+        {"sender": "assistant", "text": "Sure! Try **aglio e olio**:\n\n- Boil spaghetti\n- Sauté garlic in olive oil\n- Toss together"},
+        {"sender": "human", "content": [{"type": "text", "text": "How long does that take?"}]}
+      ]
+    },
+    {
+      "uuid": "claude-uuid-5678",
+      "name": "Code Review",
+      "created_at": "2024-02-01T09:00:00Z",
+      "chat_messages": [
+        {"sender": "assistant", "text": "Happy to review your code whenever you share it."}
+      ]
+    }
+  ]
+}
