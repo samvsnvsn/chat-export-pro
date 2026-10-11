@@ -55,7 +55,7 @@ def parse_claude(data):
             if text is None:
                 content = msg.get("content")
                 if isinstance(content, list):
-                    text = "\n".join(c.get("text", "") if isinstance(c, dict) else str(c)
+                    text = "\n".join((c.get("text") or "") if isinstance(c, dict) else str(c)
                                      for c in content)
                 else:
                     text = str(content or "")
