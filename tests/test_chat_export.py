@@ -1,3 +1,4 @@
+import chat_export
 """Tests for chat_export.py (pytest-compatible)."""
 import json
 import os
@@ -188,3 +189,15 @@ def test_search_context_lines(converted_dir):
 
 def test_search_missing_directory(tmp_path):
     assert _run_search(str(tmp_path / "nope"), "query").returncode != 0
+
+
+def test_parse_claude_content_blocks_with_null_text_preserve_unicode_text():
+    chats = chat_export.parse_claude([{
+        "name": "Unicode",
+        "chat_messages": [{
+            "sender": "human",
+            "content": [{"text": None}, {"text": "☃"}],
+        }],
+    }])
+
+    assert chats[0]["turns"] == [{"role": "user", "text": "☃"}]
